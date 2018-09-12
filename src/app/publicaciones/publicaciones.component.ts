@@ -20,4 +20,7 @@ export class PublicacionesComponent implements OnInit {
   ngOnInit() {
   }
 
+  eliminar(item){
+    this.conexion.eliminarItem(item);
+  }
 }

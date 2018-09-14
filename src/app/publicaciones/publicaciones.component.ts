@@ -10,8 +10,8 @@ export class PublicacionesComponent implements OnInit {
 
   items:any;
 
-  editarItem:any = {
-    name:''
+  editarItem: any = {
+    name: ''
   }
 
   constructor(private conexion:ConexionService) { 

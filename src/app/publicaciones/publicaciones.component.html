@@ -3,9 +3,12 @@
   <div class="float-right" (click)="eliminar(item)">
     <i class="far fa-trash-alt"></i>
   </div>
-  <div class="float-right mx-3" (click)="editar(item)" data-toggle="modal" data-target="#exampleModal">
+  <div class="float-right mx-2" (click)="editar(item)" data-toggle="modal" data-target="#exampleModal">
     <i class="fas fa-pencil-alt"></i>
   </div>
+  <div class="float-right mx-2" (click)="like(item)">
+      <i class="fas fa-heart"></i>
+    </div>
 </div>
 
 <!-- Modal -->
@@ -13,7 +16,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Editar {{editarItem.name}}</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Editar: {{editarItem.name}}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -23,11 +26,10 @@
                 <input type="text" placeholder="Edita tu publicación"
                  name="name" class="form-control"
                  [(ngModel)]="editarItem.name">
-                <button class="btn btn-warning mt-3" type="submit">Editar</button>
               </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Guardar cambios</button>
         </div>
       </div>
     </div>

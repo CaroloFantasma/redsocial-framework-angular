@@ -1,8 +1,21 @@
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <p>
+      <button mat-button (click)="close('toggle button')">Toggle</button>
+    </p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>
+      <button mat-button (click)="sidenav.open()">Open</button>
+    </p>
+
+
 <div class="container mt-5">
   <div class="row">
-      <div class="col-md-6">
-          <app-addpublicaciones></app-addpublicaciones>
-      </div>
+    <div class="col-md-6">
+      <app-addpublicaciones></app-addpublicaciones>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-6">
@@ -10,6 +23,5 @@
     </div>
   </div>
 </div>
-
-
-
+  </mat-sidenav-content>
+</mat-sidenav-container>

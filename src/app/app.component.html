@@ -1,27 +1,32 @@
 <mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
   <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
     <p>
-      <button mat-button (click)="close('toggle button')">Toggle</button>
+      <button mat-button (click)="close('toggle button')">Cerrar</button>
     </p>
+    <p> <button>Mi perfil</button></p>
+    <p><button>Actividades</button></p>
+    
   </mat-sidenav>
 
   <mat-sidenav-content>
     <p>
-      <button mat-button (click)="sidenav.open()">Open</button>
+      <button mat-button (click)="sidenav.open()">Menú</button>
     </p>
 
+    <!-- CONTENIDO DE PAGINA -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <app-addpublicaciones></app-addpublicaciones>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <app-publicaciones></app-publicaciones>
+        </div>
+      </div>
+    </div>
+    <!-- FIN CONTENIDO DE PAGINA -->
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <app-addpublicaciones></app-addpublicaciones>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <app-publicaciones></app-publicaciones>
-    </div>
-  </div>
-</div>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -24,6 +24,9 @@
   font-size: 1.2em;
 }
 
+.botonMenu:focus {
+  outline:none;
+}
 
 .botonMenuPrincipal{
   background-color: transparent;
@@ -41,5 +44,7 @@
 }
 
 .img{
-  width: 1em;
+  width: 2em;
+  margin-top: 0.2em;
+  margin-right: 0.5em;
 }

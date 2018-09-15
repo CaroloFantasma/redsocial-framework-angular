@@ -57,6 +57,7 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+import { CarruselComponent } from './carrusel/carrusel.component';
 
 
 
@@ -68,7 +69,8 @@ import {
     PublicacionesComponent,
     AddpublicacionesComponent,
     SidenavComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,

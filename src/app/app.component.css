@@ -5,3 +5,23 @@
   left: 0;
   right: 0;
 }
+
+.mat-sidenav{
+  background-color: #99CE81;
+  
+}
+
+.botonMenu{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-style: bold;
+  font-size: 1.2em;
+}
+
+.botonMenuPrincipal{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

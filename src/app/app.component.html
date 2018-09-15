@@ -1,9 +1,9 @@
 <mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
   <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
     <p>
-      <button class="botonMenuPrincipal" mat-button (click)="close('toggle button')">Cerrar</button>
+      <button class="botonMenuPrincipal mb-10 float-right" mat-button (click)="close('toggle button')"><i class="fas fa-bars"></i></button>
     </p>
-    <p><button class="botonMenu ml-3 mr-3" >Mi perfil</button></p>
+    <p class="mt-10"><button class="botonMenu ml-3 mr-3" >Mi perfil</button></p>
     <p><button class="botonMenu ml-3 mr-3" >Salud Integral</button></p>
     <p><button class="botonMenu ml-3 mr-3" >Alimentación</button></p>
     <p><button class="botonMenu ml-3 mr-3" >Actividades</button></p>
@@ -15,12 +15,14 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <p>
-      <button class="botonMenuPrincipal" mat-button (click)="sidenav.open()">Menú</button>
+    
+    <p class="toolbarBg">
+      <button class="botonMenuPrincipal" mat-button (click)="sidenav.open()"><i class="fas fa-bars "></i></button>
+      <img src="../img/celiaco3.png" class="img float-right">
     </p>
 
     <!-- CONTENIDO DE PAGINA -->
-    <app-toolbar></app-toolbar>
+    
     <div class="container mt-5">
       <div class="row">
         <div class="col-md-6 offset-3">

@@ -10,6 +10,10 @@
   background-color: #99CE81;
   
 }
+.fa-bars{
+  color: white;
+  font-style: bold;
+}
 
 .botonMenu{
   background-color: transparent;
@@ -20,8 +24,22 @@
   font-size: 1.2em;
 }
 
+
 .botonMenuPrincipal{
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.toolbarBg{
+  background-color: #99CE81;
+  height: 2.5em;
+}
+
+.celibookTitle{
+  color: white;
+  font-style: bold;
+}
+
+.img{
+  width: 1em;
 }

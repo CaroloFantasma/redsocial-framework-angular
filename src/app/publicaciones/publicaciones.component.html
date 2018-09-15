@@ -1,6 +1,8 @@
 <div class="alert alert-warning" role="alert" *ngFor="let item of items">
   <p class="titleUser">Usuario ha comentado:</p>
   {{item.name}}
+  
+  <div class="d-block">
   <div class="float-right" (click)="eliminar(item)">
     <i class="far fa-trash-alt"></i>
   </div>
@@ -10,6 +12,7 @@
   <div class="float-right mx-2" (click)="like(item)">
       <i class="fas fa-heart"></i>
     </div>
+  </div>
 </div>
 
 <!-- Modal -->

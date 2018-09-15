@@ -1,16 +1,16 @@
 <mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
   <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
-    <p>
-      <button class="botonMenuPrincipal mb-10 float-right" mat-button (click)="close('toggle button')"><i class="fas fa-bars"></i></button>
+    <p class="pburguer">
+      <button class="botonMenuPrincipal float-right" mat-button (click)="close('toggle button')"><i class="fas fa-bars"></i></button>
     </p>
-    <p class="mt-10"><button class="botonMenu ml-3 mr-3" >Mi perfil</button></p>
-    <p><button class="botonMenu ml-3 mr-3" >Salud Integral</button></p>
-    <p><button class="botonMenu ml-3 mr-3" >Alimentación</button></p>
-    <p><button class="botonMenu ml-3 mr-3" >Actividades</button></p>
-    <p><button class="botonMenu ml-3 mr-3" >Noticias</button></p>
-    <p><button class="botonMenu ml-3 mr-3" >Preguntas frecuentes</button></p>
-    <p><button class="botonMenu ml-3 mr-3" >Home</button></p>
-    <p><button class="botonMenu ml-3 mr-3" >Cerrar sesión</button></p>
+    <p><button class="botonMenu ml-3 mr-3 mt-10"><i class="fas fa-user-alt"></i> Mi perfil</button></p>
+    <p><button class="botonMenu ml-3 mr-3"> <i class="fas fa-heartbeat"></i> Salud Integral</button></p>
+    <p><button class="botonMenu ml-3 mr-3"> <i class="fas fa-utensils"></i> Alimentación</button></p>
+    <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-address-book"></i> Actividades</button></p>
+    <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-newspaper"></i> Noticias</button></p>
+    <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-question-circle"></i> Preguntas frecuentes</button></p>
+    <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-home"></i> Home</button></p>
+    <p><button class="botonMenu ml-3 mr-3"> <i class="fas fa-sign-out-alt"></i> Cerrar sesión</button></p>
     
   </mat-sidenav>
 

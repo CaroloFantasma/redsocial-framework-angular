@@ -1,0 +1,21 @@
+.carousel-inner{
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+  border-radius: 5px;
+}
+
+.titlePage{
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 2em;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.titlePage2{
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 2em;
+  color: grey;
+}

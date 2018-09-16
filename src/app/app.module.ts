@@ -19,6 +19,8 @@ import { AddpublicacionesComponent } from './addpublicaciones/addpublicaciones.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AuthService } from './auth.service';
+
 
 import {
   MatAutocompleteModule,
@@ -62,9 +64,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginFacebookComponent } from './login-facebook/login-facebook.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -126,7 +125,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
   MatTooltipModule,
   MatTreeModule
   ],
-  providers: [ConexionService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

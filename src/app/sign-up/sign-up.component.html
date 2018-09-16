@@ -1,3 +1,20 @@
-<p>
-  sign-up works!
-</p>
+<form (submit)="onSubmitaddUser()">
+  <div class="row sign-up">
+    <div class="col-md-6 offset-md-3">
+      <form>
+        <div class="form-group bars">
+          <label for="exampleInputEmail1"></label>
+          <input type="email" class="form-control" id="signUpInputInputEmail" aria-describedby="emailHelp" required
+            placeholder="Correo electrónico" required="email">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group bars">
+          <label for="exampleInputPassword1"></label>
+          <input type="password" class="form-control" id="signUpInputPassword" required placeholder="Contraseña"
+            required="password">
+          <button type="submit" id="btnSingUp" class="btn btn-primary">Registrar cuenta</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</form>

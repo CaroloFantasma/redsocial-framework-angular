@@ -58,6 +58,10 @@ import {
   MatTreeModule,
 } from '@angular/material';
 import { CarruselComponent } from './carrusel/carrusel.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
+import { LoginFacebookComponent } from './login-facebook/login-facebook.component';
+import { LoginGoogleComponent } from './login-google/login-google.component';
 
 
 
@@ -70,7 +74,11 @@ import { CarruselComponent } from './carrusel/carrusel.component';
     AddpublicacionesComponent,
     SidenavComponent,
     ToolbarComponent,
-    CarruselComponent
+    CarruselComponent,
+    SignUpComponent,
+    FacebookLoginComponent,
+    LoginFacebookComponent,
+    LoginGoogleComponent
   ],
   imports: [
     BrowserModule,

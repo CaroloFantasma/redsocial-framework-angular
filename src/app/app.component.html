@@ -11,13 +11,11 @@
     <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-question-circle"></i> Preguntas frecuentes</button></p>
     <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-home"></i> Home</button></p>
     <p><button class="botonMenu ml-3 mr-3"> <i class="fas fa-sign-out-alt"></i> Cerrar sesión</button></p>
-    
   </mat-sidenav>
 
   <mat-sidenav-content>
-    
     <p class="toolbarBg">
-      <button class="botonMenuPrincipal" mat-button (click)="sidenav.open()"><i class="fas fa-bars "></i></button>
+      <button class="botonMenuPrincipal" mat-button (click)="sidenav.open()"><i class="fas fa-bars"></i></button>
       <img src="/src/img/celiaco3.png" class="img float-right">
     </p>
 
@@ -36,6 +34,11 @@
         </div>
       </div>
     </div>
+
+    <app-login></app-login>
+    <app-login-facebook></app-login-facebook>
+    <app-login-google></app-login-google>
+    <app-sign-up></app-sign-up>
     <!-- FIN CONTENIDO DE PAGINA -->
 
   </mat-sidenav-content>

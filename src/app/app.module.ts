@@ -59,9 +59,9 @@ import {
 } from '@angular/material';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { FacebookLoginComponent } from './facebook-login/facebook-login.component';
 import { LoginFacebookComponent } from './login-facebook/login-facebook.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 
 
@@ -76,9 +76,9 @@ import { LoginGoogleComponent } from './login-google/login-google.component';
     ToolbarComponent,
     CarruselComponent,
     SignUpComponent,
-    FacebookLoginComponent,
     LoginFacebookComponent,
-    LoginGoogleComponent
+    LoginGoogleComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,

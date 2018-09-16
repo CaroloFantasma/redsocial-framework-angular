@@ -16,7 +16,7 @@ export class SignUpComponent implements OnInit {
   }
 
   OnSubmitAddUser() {
-    this.authService.registerUser(this.email, this.password)
+    this.authService.signup(this.email, this.password)
     .then( (res) => {
       console.log('bien!');
       console.log(res);

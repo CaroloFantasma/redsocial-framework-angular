@@ -58,9 +58,9 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
+  
 } from '@angular/material';
 import { CarruselComponent } from './carrusel/carrusel.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginFacebookComponent } from './login-facebook/login-facebook.component';
 import { LoginGoogleComponent } from './login-google/login-google.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
@@ -74,12 +74,12 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     SidenavComponent,
     ToolbarComponent,
     CarruselComponent,
-    SignUpComponent,
     LoginFacebookComponent,
     LoginGoogleComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -124,7 +124,6 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
-  ReactiveFormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

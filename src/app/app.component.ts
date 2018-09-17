@@ -6,6 +6,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AngularFireDatabase } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-root',
@@ -17,7 +19,7 @@ export class AppComponent {
   constructor(db: AngularFirestore, private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar) {
     this.items = db.collection('items').valueChanges();
   }
-  
+
   @ViewChild('sidenav') sidenav: MatSidenav;
 
   reason = '';

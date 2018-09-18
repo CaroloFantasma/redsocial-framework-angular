@@ -3,6 +3,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from './auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { AngularFireStorage } from 'angularfire2/storage';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +15,13 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class AppComponent {
   items: Observable<any[]>;
-  constructor(db: AngularFirestore) {
+  uploadPercent: Observable<number>;
+  downloadURL: Observable<string>;
+
+  constructor(db: AngularFirestore, private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private storage: AngularFireStorage) {
     this.items = db.collection('items').valueChanges();
   }
-  
+
   @ViewChild('sidenav') sidenav: MatSidenav;
 
   reason = '';
@@ -23,9 +30,8 @@ export class AppComponent {
     this.reason = reason;
     this.sidenav.close();
   }
-
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 }
 
 
-  
+

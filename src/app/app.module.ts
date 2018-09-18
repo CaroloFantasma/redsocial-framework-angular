@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { AddpublicacionesComponent } from './addpublicaciones/addpublicaciones.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AuthService } from './auth.service';
+
 
 import {
   MatAutocompleteModule,
@@ -56,11 +59,25 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
+  
 } from '@angular/material';
 import { CarruselComponent } from './carrusel/carrusel.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
-
-
+const appRoutes: Routes = [
+  {
+    path:'',
+    component: LoginComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
+    path:'wall',
+    component: AppComponent
+  },
+];
 
 @NgModule({
   declarations: [
@@ -70,9 +87,11 @@ import { CarruselComponent } from './carrusel/carrusel.component';
     AddpublicacionesComponent,
     SidenavComponent,
     ToolbarComponent,
-    CarruselComponent
+    CarruselComponent,
+    NotFoundPageComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -116,9 +135,9 @@ import { CarruselComponent } from './carrusel/carrusel.component';
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule
+  MatTreeModule,
   ],
-  providers: [ConexionService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

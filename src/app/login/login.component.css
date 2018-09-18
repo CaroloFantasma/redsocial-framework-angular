@@ -1,0 +1,52 @@
+.btn-primary {
+  background-color: #9B369D;
+  margin-top: 1em;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  width: 89.5%;
+  margin-left: 5%;
+}
+
+.form-control {
+  width: 89%;
+  margin-left: 5%;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+
+.btnFb {
+  width: 90%;
+  height: 35px;
+  border-radius: 4px;
+  background: #3b5998;
+  color: white;
+  border: 0px transparent;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: inline-block;
+}
+
+.btnFb:hover {
+  background: #3b5998;
+  opacity: 0.6;
+}
+
+.btnGoogle {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 50%;
+  width: 90%;
+  height: 35px;
+  border-radius: 4px;
+  color: white;
+  background: #db3236;
+  border: 0px transparent;
+  text-align: center;
+}
+
+.btnGoogle:hover {
+  background: #db3236;
+  opacity: 0.6;
+}

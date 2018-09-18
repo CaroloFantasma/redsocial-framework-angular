@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -62,6 +63,21 @@ import {
 } from '@angular/material';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+
+const appRoutes: Routes = [
+  {
+    path:'',
+    component: LoginComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
+    path:'wall',
+    component: AppComponent
+  },
+];
 
 @NgModule({
   declarations: [

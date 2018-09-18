@@ -57,14 +57,14 @@ export class LoginComponent implements OnInit {
   loginGoogle(){
     this.authService.loginGoogle()
     .then(response => {
-      this.router.navigate(['/muro']);
+      this.router.navigate(['/wall']);
     })
   }
 
   loginFb(){
    this.authService.loginFacebook()
    .then(response => {
-     this.router.navigate(['/muro']);
+     this.router.navigate(['/wall']);
    })
  }
 

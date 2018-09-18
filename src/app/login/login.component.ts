@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ export class LoginComponent implements OnInit {
   authForm: FormGroup;
 
   //Solicitamos en el constructor todas las cosas necesarias 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private router: Router) {
     this.createAuthForm();
   }
 
@@ -22,23 +24,17 @@ export class LoginComponent implements OnInit {
   createAuthForm() {
     this.authForm = this.formBuilder.group({
       email: ['', Validators.compose([Validators.required, Validators.email])],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(4)])]
+      password: ['', Validators.compose([Validators.required, Validators.minLength(8)])]
     });
   }
 
-  /*
-   * Instalé un módulo para hacer snackbars desde material.angular.io :
-   * MatSnackBarModule
-   */
   onRegister() {
     this.authService.signup(this.authForm.value.email, this.authForm.value.password)
       .then(() => {
-        //Registro exitoso, celebremos esto!
       })
       .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
         this.snackBar.open('Error de registro, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
+          , null
           , {
             duration: 3000
           });
@@ -48,31 +44,40 @@ export class LoginComponent implements OnInit {
   onLogin() {
     this.authService.login(this.authForm.value.email, this.authForm.value.password)
       .then(() => {
-        //Login exitoso, así que celebramos con el usuario (?)
       })
       .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
         this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
+          , null
           , {
             duration: 3000
           });
       });
   }
+
+  loginGoogle(){
+    this.authService.loginGoogle()
+    .then(response => {
+      this.router.navigate(['/muro']);
+    })
+  }
+
+  loginFb(){
+   this.authService.loginFacebook()
+   .then(response => {
+     this.router.navigate(['/muro']);
+   })
+ }
 
   onLogout() {
     this.authService.logout()
       .then(() => {
-        //Logout exitoso, adios usuario!
       })
       .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
         this.snackBar.open('Error al tratar de cerrar sesión, trata otra vez'
-          , null/*No necesitamos botón en el aviso*/
+          , null
           , {
             duration: 3000
           });
       });
   }
-
 }

@@ -1,0 +1,48 @@
+
+#containerPreguntasFrecuentes {
+  background-color: white;
+  background-image: url(/src/img/fondo.png);
+  padding: 5%;
+  margin: 0;
+  width: 100%;
+  text-align: justify;
+}
+
+
+/* SECCION DE PREGUNTAS FRECUENTES */
+
+.questionsCol {
+  height: 15em;
+  text-align: justify;
+}
+
+#titleQuestions {
+  text-align: center;
+  color: black;
+  font-size: 2em;
+  margin-top: 3em;
+}
+
+.panel-heading {
+  background-color: #9B369D;
+  margin: 1em;
+  border-radius: 5px;
+}
+
+.panel-body {
+  background-color: white;
+  margin: 1em;
+  border: #9B369D 3px solid;
+}
+.preguntas{
+  width: 90%;
+}
+.titleCollapse {
+  color: white;
+  font-size: 0.7em;
+  margin-left: 1em;
+}
+
+#accordion {
+  margin-top: 2.5em;
+}

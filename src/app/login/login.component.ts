@@ -30,11 +30,11 @@ export class LoginComponent implements OnInit {
 
   onRegister() {
     this.authService.signup(this.authForm.value.email, this.authForm.value.password)
-    .then(response => {
-      this.router.navigate(['/muro']);
-    })
+      .then(response => {
+        this.router.navigate(['/muro']);
+      })
       .catch(() => {
-        this.snackBar.open('Error de registro, trata otra vez'
+        this.snackBar.open('Error de registro, Error, por favor inténtelo nuevamente'
           , null
           , {
             duration: 3000
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/muro']);
       })
       .catch(() => {
-        this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
+        this.snackBar.open('Error, por favor inténtelo nuevamente'
           , null
           , {
             duration: 3000
@@ -56,31 +56,17 @@ export class LoginComponent implements OnInit {
       });
   }
 
-  loginGoogle(){
+  loginGoogle() {
     this.authService.loginGoogle()
-    .then(response => {
-      this.router.navigate(['/muro']);
-    })
+      .then(response => {
+        this.router.navigate(['/muro']);
+      })
   }
 
-  loginFb(){
-   this.authService.loginFacebook()
-   .then(response => {
-     this.router.navigate(['/muro']);
-   })
- }
-
-  onLogout() {
-    this.authService.logout()
-    .then(response => {
-      this.router.navigate(['/']);
-    })
-      .catch(() => {
-        this.snackBar.open('Error al tratar de cerrar sesión, trata otra vez'
-          , null
-          , {
-            duration: 3000
-          });
-      });
+  loginFb() {
+    this.authService.loginFacebook()
+      .then(response => {
+        this.router.navigate(['/muro']);
+      })
   }
 }

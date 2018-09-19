@@ -61,6 +61,19 @@ export class AppComponent {
     this.router.navigate(['/actividades']);
   }
 
+  onLogout() {
+    this.authService.logout()
+    .then(response => {
+      this.router.navigate(['/']);
+    })
+      .catch(() => {
+        this.snackBar.open('Error, por favor inténtelo nuevamente'
+          , null
+          , {
+            duration: 3000
+          });
+      });
+  }
 }
 
 

@@ -80,10 +80,7 @@ const routes: Routes = [
     path:'login',
     component: LoginComponent
   },
-  {
-    path:'wall',
-    component: AppComponent
-  },
+ 
   {
     path:'perfil',
     component: PerfilComponent
@@ -111,7 +108,7 @@ const routes: Routes = [
   {
     path:'preguntas',
     component: PreguntasComponent
-  }
+  },
 ];
 
 @NgModule({

@@ -63,6 +63,7 @@ import {
 } from '@angular/material';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { LikeDislikeComponent } from './like-dislike/like-dislike.component';
 
 const appRoutes: Routes = [
   {
@@ -89,6 +90,7 @@ const appRoutes: Routes = [
     ToolbarComponent,
     CarruselComponent,
     NotFoundPageComponent,
+    LikeDislikeComponent
   ],
   imports: [
     ReactiveFormsModule,

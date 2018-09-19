@@ -1,8 +1,9 @@
 #containerNoticias {
   background-color: white;
-  padding: 0%;
-  margin: 0;
-  display: none;
   width: 100%;
   text-align: justify;
+}
+
+.titles{
+  text-align: center;
 }

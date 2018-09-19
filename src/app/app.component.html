@@ -3,13 +3,13 @@
     <p class="pburguer">
       <button class="botonMenuPrincipal float-right" mat-button (click)="close('toggle button')"><i class="fas fa-bars"></i></button>
     </p>
-    <p><button class="botonMenu ml-3 mr-3 mt-10"><i class="fas fa-user-alt"></i> Mi perfil</button></p>
-    <p><button class="botonMenu ml-3 mr-3"> <i class="fas fa-heartbeat"></i> Salud Integral</button></p>
-    <p><button class="botonMenu ml-3 mr-3"> <i class="fas fa-utensils"></i> Alimentación</button></p>
+    <p><button class="botonMenu ml-3 mr-3 mt-10" (click)="goToPerfil()"><i class="fas fa-user-alt"></i> Mi perfil</button></p>
+    <p><button class="botonMenu ml-3 mr-3" (click)="goToSalud()"> <i class="fas fa-heartbeat"></i> Salud Integral</button></p>
+    <p><button class="botonMenu ml-3 mr-3" (click)="goToAlimentacion()"> <i class="fas fa-utensils"></i> Alimentación</button></p>
     <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-address-book"></i> Actividades</button></p>
     <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-newspaper"></i> Noticias</button></p>
     <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-question-circle"></i> Preguntas frecuentes</button></p>
-    <p><button class="botonMenu ml-3 mr-3"><i class="fas fa-home"></i> Home</button></p>
+    <p><button class="botonMenu ml-3 mr-3"  (click)="goToHome()"><i class="fas fa-home"></i> Home</button></p>
     <p><button type="button" class="botonMenu ml-3 mr-3" (click)="onLogout()"> <i class="fas fa-sign-out-alt"></i> Cerrar sesión</button></p>
   </mat-sidenav>
 
@@ -20,22 +20,7 @@
     </p>
 
     <!-- CONTENIDO DE PAGINA -->
-    <app-carrusel></app-carrusel>
-
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <app-addpublicaciones></app-addpublicaciones>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mx-auto">
-          <app-publicaciones></app-publicaciones>
-        </div>
-      </div>
-    </div>
-
-    <app-login></app-login>
+    <router-outlet></router-outlet>
     <!-- FIN CONTENIDO DE PAGINA -->
 
   </mat-sidenav-content>

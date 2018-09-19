@@ -1,0 +1,7 @@
+.containerSalud{
+  background-image: url(src/img/fondo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100vh;
+  text-align: justify;
+}

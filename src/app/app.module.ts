@@ -74,7 +74,7 @@ import { ActividadesComponent } from './actividades/actividades.component';
 const routes: Routes = [
   {
     path:'',
-    component: LoginComponent
+    component: MuroComponent
   },
   {
     path:'login',

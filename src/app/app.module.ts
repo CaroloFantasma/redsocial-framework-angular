@@ -19,7 +19,6 @@ import { AddpublicacionesComponent } from './addpublicaciones/addpublicaciones.c
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AuthService } from './auth.service';
 
 
@@ -64,8 +63,15 @@ import {
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { LikeDislikeComponent } from './like-dislike/like-dislike.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { MuroComponent } from './muro/muro.component';
+import { SaludComponent } from './salud/salud.component';
+import { AlimentacionComponent } from './alimentacion/alimentacion.component';
+import { PreguntasComponent } from './preguntas/preguntas.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { ActividadesComponent } from './actividades/actividades.component';
 
-const appRoutes: Routes = [
+const routes: Routes = [
   {
     path:'',
     component: LoginComponent
@@ -78,6 +84,34 @@ const appRoutes: Routes = [
     path:'wall',
     component: AppComponent
   },
+  {
+    path:'perfil',
+    component: PerfilComponent
+  },
+  {
+    path:'muro',
+    component: MuroComponent
+  },
+  {
+    path:'salud',
+    component: SaludComponent
+  },
+  {
+    path:'alimentacion',
+    component: AlimentacionComponent
+  },
+  {
+    path:'noticias',
+    component: NoticiasComponent
+  },
+  {
+    path:'actividades',
+    component: ActividadesComponent
+  },
+  {
+    path:'preguntas',
+    component: PreguntasComponent
+  }
 ];
 
 @NgModule({
@@ -87,15 +121,22 @@ const appRoutes: Routes = [
     PublicacionesComponent,
     AddpublicacionesComponent,
     SidenavComponent,
-    ToolbarComponent,
     CarruselComponent,
     NotFoundPageComponent,
-    LikeDislikeComponent
+    LikeDislikeComponent,
+    PerfilComponent,
+    MuroComponent,
+    SaludComponent,
+    AlimentacionComponent,
+    PreguntasComponent,
+    NoticiasComponent,
+    ActividadesComponent,
   ],
   imports: [
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,

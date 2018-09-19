@@ -1,10 +1,11 @@
 <!--ngIf desaparecerá lo que esta dentro del div-->
-<div *ngIf="authService.user | async">
+<div class="container">
+<div *ngIf="authService.user | async" class="col-md-6 mx-auto">
   <p>Bienvenido : {{(authService.user | async).email}}</p>
   <button type="button" (click)="onLogout()">Cerrar sesión</button>
 </div>
 <div class="row iniciarsesion">
-  <div class="col-md-6 offset-md-3">
+  <div class="col-md-6 mx-auto">
     <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
       <input type="email" class="form-control" placeholder="Correo electrónico" formControlName="email">
       <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
@@ -15,15 +16,16 @@
 </div>
 
 <div class="row">
-  <div class="col-md-6 offset-md-3">
+  <div class="col-md-6 mx-auto">
     <button type="button" (click)="loginFb()" class="btn btn-primary btnFb">
       <i class="fab fa-facebook-f"></i> Registrarme con Facebook</button>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-6 offset-md-3">
+  <div class="col-md-6 mx-auto">
     <button type="button" (click)="loginGoogle()" mt-8 class="btn btn-primary btnGoogle">
       <i class="fab fa-google-plus-g"></i> Registrarme con Google+</button>
   </div>
+</div>
 </div>

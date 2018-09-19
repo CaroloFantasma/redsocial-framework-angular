@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AngularFireStorage } from 'angularfire2/storage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ export class AppComponent {
   uploadPercent: Observable<number>;
   downloadURL: Observable<string>;
 
-  constructor(db: AngularFirestore, private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private storage: AngularFireStorage) {
+  constructor(db: AngularFirestore, private router: Router, formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private storage: AngularFireStorage) {
     this.items = db.collection('items').valueChanges();
   }
 
@@ -31,6 +32,35 @@ export class AppComponent {
     this.sidenav.close();
   }
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+
+  goToPerfil() {
+    this.router.navigate(['/perfil']);
+  }
+
+  goToHome() {
+    this.router.navigate(['/muro']);
+  }
+
+  goToSalud() {
+    this.router.navigate(['/salud']);
+  }
+
+  goToAlimentacion() {
+    this.router.navigate(['/alimentacion']);
+  }
+
+  goToNoticias() {
+    this.router.navigate(['/noticias']);
+  }
+
+  goToPreguntas() {
+    this.router.navigate(['/preguntas']);
+  }
+
+  goToActividades() {
+    this.router.navigate(['/actividades']);
+  }
+
 }
 
 

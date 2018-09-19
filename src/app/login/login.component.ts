@@ -30,8 +30,9 @@ export class LoginComponent implements OnInit {
 
   onRegister() {
     this.authService.signup(this.authForm.value.email, this.authForm.value.password)
-      .then(() => {
-      })
+    .then(response => {
+      this.router.navigate(['/muro']);
+    })
       .catch(() => {
         this.snackBar.open('Error de registro, trata otra vez'
           , null
@@ -43,7 +44,8 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
     this.authService.login(this.authForm.value.email, this.authForm.value.password)
-      .then(() => {
+      .then(response => {
+        this.router.navigate(['/muro']);
       })
       .catch(() => {
         this.snackBar.open('Error al tratar de iniciar sesión, trata otra vez'
@@ -57,21 +59,22 @@ export class LoginComponent implements OnInit {
   loginGoogle(){
     this.authService.loginGoogle()
     .then(response => {
-      this.router.navigate(['/wall']);
+      this.router.navigate(['/muro']);
     })
   }
 
   loginFb(){
    this.authService.loginFacebook()
    .then(response => {
-     this.router.navigate(['/wall']);
+     this.router.navigate(['/muro']);
    })
  }
 
   onLogout() {
     this.authService.logout()
-      .then(() => {
-      })
+    .then(response => {
+      this.router.navigate(['/']);
+    })
       .catch(() => {
         this.snackBar.open('Error al tratar de cerrar sesión, trata otra vez'
           , null

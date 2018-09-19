@@ -66,6 +66,9 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { MuroComponent } from './muro/muro.component';
 import { SaludComponent } from './salud/salud.component';
 import { AlimentacionComponent } from './alimentacion/alimentacion.component';
+import { PreguntasComponent } from './preguntas/preguntas.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { ActividadesComponent } from './actividades/actividades.component';
 
 const routes: Routes = [
   {
@@ -95,6 +98,18 @@ const routes: Routes = [
   {
     path:'alimentacion',
     component: AlimentacionComponent
+  },
+  {
+    path:'noticias',
+    component: NoticiasComponent
+  },
+  {
+    path:'actividades',
+    component: ActividadesComponent
+  },
+  {
+    path:'preguntas',
+    component: PreguntasComponent
   }
 ];
 
@@ -111,6 +126,9 @@ const routes: Routes = [
     MuroComponent,
     SaludComponent,
     AlimentacionComponent,
+    PreguntasComponent,
+    NoticiasComponent,
+    ActividadesComponent,
   ],
   imports: [
     ReactiveFormsModule,

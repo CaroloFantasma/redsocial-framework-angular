@@ -49,6 +49,18 @@ export class AppComponent {
     this.router.navigate(['/alimentacion']);
   }
 
+  goToNoticias() {
+    this.router.navigate(['/noticias']);
+  }
+
+  goToPreguntas() {
+    this.router.navigate(['/preguntas']);
+  }
+
+  goToActividades() {
+    this.router.navigate(['/actividades']);
+  }
+
 }
 
 

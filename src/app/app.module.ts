@@ -62,6 +62,7 @@ import {
 } from '@angular/material';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { LikeDislikeComponent } from './like-dislike/like-dislike.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { MuroComponent } from './muro/muro.component';
 import { SaludComponent } from './salud/salud.component';
@@ -79,10 +80,7 @@ const routes: Routes = [
     path:'login',
     component: LoginComponent
   },
-  {
-    path:'wall',
-    component: AppComponent
-  },
+ 
   {
     path:'perfil',
     component: PerfilComponent
@@ -110,7 +108,7 @@ const routes: Routes = [
   {
     path:'preguntas',
     component: PreguntasComponent
-  }
+  },
 ];
 
 @NgModule({
@@ -122,6 +120,7 @@ const routes: Routes = [
     SidenavComponent,
     CarruselComponent,
     NotFoundPageComponent,
+    LikeDislikeComponent,
     PerfilComponent,
     MuroComponent,
     SaludComponent,

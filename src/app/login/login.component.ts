@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
       })
   }
 
-  loginFb() {
+  loginFacebook() {
     this.authService.loginFacebook()
       .then(response => {
         this.router.navigate(['/muro']);

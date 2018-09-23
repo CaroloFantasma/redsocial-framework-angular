@@ -46,4 +46,6 @@ export class PublicacionesComponent implements OnInit {
   agregarItemEditado(){
     this.conexion.EditarItem(this.editarItem);
   }
+
+  
 }

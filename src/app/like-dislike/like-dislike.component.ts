@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-like-dislike',
@@ -6,18 +6,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./like-dislike.component.css']
 })
 export class LikeDislikeComponent  {
-  @Input() numberOfLikes : number;
-  
-  @Output()
-  change: EventEmitter<number> = new EventEmitter<number>();
+  @Input() numberOfLikes : number = 0;
 
   likeClick() {
     this.numberOfLikes++;
-    this.change.emit(this.numberOfLikes);
   }
 
   dislikeClick() {
     this.numberOfLikes--;
-    this.change.emit(this.numberOfLikes);
   }
 }

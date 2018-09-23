@@ -19,7 +19,7 @@ export class AppComponent {
   uploadPercent: Observable<number>;
   downloadURL: Observable<string>;
 
-  constructor(db: AngularFirestore, private router: Router, formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, private storage: AngularFireStorage) {
+  constructor(db: AngularFirestore, private router: Router, formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, private storage: AngularFireStorage) {
     this.items = db.collection('items').valueChanges();
   }
 

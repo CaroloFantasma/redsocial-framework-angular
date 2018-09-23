@@ -18,7 +18,6 @@ import { PublicacionesComponent } from './publicaciones/publicaciones.component'
 import { AddpublicacionesComponent } from './addpublicaciones/addpublicaciones.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SidenavComponent } from './sidenav/sidenav.component';
 import { AuthService } from './auth.service';
 
 
@@ -117,7 +116,6 @@ const routes: Routes = [
     LoginComponent,
     PublicacionesComponent,
     AddpublicacionesComponent,
-    SidenavComponent,
     CarruselComponent,
     NotFoundPageComponent,
     LikeDislikeComponent,

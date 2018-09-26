@@ -10,13 +10,18 @@ padding-bottom: 2em;
 
 .fa-trash-alt{
   color: gray;
+  cursor: pointer;
 }
 
 .fa-pencil-alt{
   color: gray;
+  cursor: pointer;
+  margin-right: 0.2em;
 }
 
-.fa-heart{
-  color: gray;
-}
+
+
+       
+
+
 

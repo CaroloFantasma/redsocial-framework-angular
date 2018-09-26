@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./like-dislike.component.css']
 })
 export class LikeDislikeComponent  {
-  @Input() numberOfLikes : number;
+  @Input() numberOfLikes : number = 0;
   
   @Output()
   change: EventEmitter<number> = new EventEmitter<number>();

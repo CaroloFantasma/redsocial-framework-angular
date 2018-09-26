@@ -47,3 +47,6 @@ export class PublicacionesComponent implements OnInit {
     this.conexion.EditarItem(this.editarItem);
   }
 }
+
+
+

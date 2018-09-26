@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionService } from '../services/conexion.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-addpublicaciones',
@@ -7,7 +8,7 @@ import { ConexionService } from '../services/conexion.service';
   styleUrls: ['./addpublicaciones.component.css']
 })
 export class AddpublicacionesComponent implements OnInit {
-
+  authForm: FormGroup; 
   item:any = {
     name:''
   }

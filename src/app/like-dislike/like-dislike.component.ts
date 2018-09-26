@@ -13,11 +13,9 @@ export class LikeDislikeComponent  {
 
   likeClick() {
     this.numberOfLikes++;
-    this.change.emit(this.numberOfLikes);
   }
 
   dislikeClick() {
     this.numberOfLikes--;
-    this.change.emit(this.numberOfLikes);
   }
 }

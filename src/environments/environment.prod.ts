@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
+  production: true,
   firebase: {
     apiKey: "AIzaSyALY54w3pacR4MpQ_syWrgp3HJxY9BHURY",
     authDomain: "celibook-frameworks.firebaseapp.com",

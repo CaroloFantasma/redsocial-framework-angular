@@ -15,7 +15,4 @@ export class LikeDislikeComponent  {
     this.numberOfLikes++;
   }
 
-  dislikeClick() {
-    this.numberOfLikes--;
-  }
 }

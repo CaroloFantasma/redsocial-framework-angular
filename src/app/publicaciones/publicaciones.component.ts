@@ -5,14 +5,12 @@ import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-publicaciones',
   templateUrl: './publicaciones.component.html',
   styleUrls: ['./publicaciones.component.css']
 })
 export class PublicacionesComponent implements OnInit {
-
 
   items:any;
 
@@ -27,17 +25,16 @@ export class PublicacionesComponent implements OnInit {
       this.items = item;
       console.log(this.items)
     });
-    
-    
   }
 
   ngOnInit() {
   }
-  
 
   eliminar(item){
+    if(confirm('Quieres eliminar esta publicación?')){
     this.conexion.eliminarItem(item);
   }
+}
 
   editar(item){
     this.editarItem = item;
@@ -46,8 +43,6 @@ export class PublicacionesComponent implements OnInit {
   agregarItemEditado(){
     this.conexion.EditarItem(this.editarItem);
   }
-
-  
 }
 
 

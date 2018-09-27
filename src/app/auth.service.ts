@@ -14,7 +14,7 @@ interface User {
 })
 export class AuthService {
   user: Observable<User>;
-
+ 
   constructor(private firebaseAuth: AngularFireAuth) {
     this.user = firebaseAuth.authState;
   }

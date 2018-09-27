@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   authForm: FormGroup;
 
   //Solicitamos en el constructor todas las cosas necesarias 
-  constructor(private formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, private router: Router) {
+  constructor(public formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar, private router: Router) {
     this.createAuthForm();
   }
 
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/muro']);
       })
       .catch(() => {
-        this.snackBar.open('Error de registro, Error, por favor inténtelo nuevamente'
+        this.snackBar.open('Error, por favor inténtelo nuevamente'
           , null
           , {
             duration: 3000

@@ -31,7 +31,7 @@ export class PublicacionesComponent implements OnInit {
   }
 
   eliminar(item){
-    if(confirm('Quieres eliminar esta publicación?')){
+    if(confirm('¿Quieres eliminar esta publicación?')){
     this.conexion.eliminarItem(item);
   }
 }
@@ -40,7 +40,7 @@ export class PublicacionesComponent implements OnInit {
     this.editarItem = item;
   }
 
-  agregarItemEditado(){
+  guardarItemEditado(){
     this.conexion.EditarItem(this.editarItem);
   }
 }

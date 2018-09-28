@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms';
 export class AddpublicacionesComponent implements OnInit {
   authForm: FormGroup; 
   item:any = {
-    name:''
+    name:'',
   }
   constructor(private servicio:ConexionService) { }
 
